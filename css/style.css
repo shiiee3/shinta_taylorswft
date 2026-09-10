@@ -1,0 +1,135 @@
+/* Shared project styles for the Taylor Swift portfolio */
+:root {
+    --rose-50: #fff5f7;
+    --rose-100: #ffe4e9;
+    --rose-500: #ec4899;
+    --rose-700: #be185d;
+    --ink: #1e293b;
+}
+
+.bg-rose-sparkle {
+    background-color: var(--rose-50);
+    background-image: radial-gradient(rgba(236, 72, 153, 0.1) 1.5px, transparent 1.5px), radial-gradient(rgba(244, 114, 182, 0.08) 1.5px, var(--rose-50) 1.5px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+}
+
+.page-section {
+    display: none;
+}
+
+.page-section.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.rose-badge {
+    box-shadow: 0 4px 20px 0 rgba(236, 72, 153, 0.15);
+}
+
+.external-page {
+    min-height: 100vh;
+    background: var(--rose-50);
+    display: flex;
+    flex-direction: column;
+}
+
+.external-page main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+}
+
+.external-page h1 {
+    color: #881337;
+}
+
+.external-page .back-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--rose-700);
+    font-weight: 700;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid #fecdd6;
+    box-shadow: 0 4px 18px rgba(190, 24, 93, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.site-nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.site-brand {
+    color: #881337;
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.site-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.35rem;
+}
+
+.site-links a {
+    color: #475569;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.65rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-links a:hover,
+.site-links a[aria-current="page"] {
+    color: #be185d;
+    background: #fff1f2;
+}
+
+.site-footer {
+    margin-top: auto;
+    padding: 2rem 1.5rem;
+    background: #ffffff;
+    border-top: 1px solid #fecdd6;
+    color: #64748b;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.site-footer strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #1e293b;
+}
+
+@media (max-width: 760px) {
+    .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-links {
+        justify-content: flex-start;
+    }
+}
